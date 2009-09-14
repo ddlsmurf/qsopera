@@ -1,0 +1,51 @@
+   ____   _____ ____                       
+  / __ \ / ___// __ \____  ___  _________ _
+ / / / / \__ \/ / / / __ \/ _ \/ ___/ __ `/
+/ /_/ / ___/ / /_/ / /_/ /  __/ /  / /_/ / 
+\___\_\/____/\____/ .___/\___/_/   \__,_/  
+                 /_/                       
+
+Purpose
+-------
+This is a plugin for Quicksilver. It makes Opera (and other browsers) act nice together.
+
+Features
+--------
+* Adds a catalog with the bookmarks and searches of Opera
+* Adds a "Operas current web page" proxy object
+* Adds an "Open with Opera" action
+* Adds a couple of scripts for copying and moving URLs between Opera, Safari and Firefox
+* Browse into Opera to get current open tabs
+
+Requirements
+------------
+Quicksilver, Opera 10.
+
+Compile Requirements
+--------------------
+XCode, Quicksilver in its developper version
+See http://lipidity.com/apple/quicksilver-plugins-in-objective-c/
+A big dose of patience, this is a hack together
+
+Credits
+-------
+	Thanks to Ankur Kothari (http://lipidity.com/apple/quicksilver-plugins-in-objective-c/)
+
+Licencing and Copyright
+-----------------------
+Copyright © 2009 by Eric Doughty-Papassideris
+
+This file is part of QSOpera.
+
+QSOpera is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+QSOpera is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with QSOpera.  If not, see <http://www.gnu.org/licenses/>.

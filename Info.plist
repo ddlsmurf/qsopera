@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>QSOpera</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSOpera</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Opera Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>53</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSOperaAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSOperaAction</string>
+			<key>actionSelector</key>
+			<string>performActionOnObject:</string>
+			<key>directTypes</key>
+			<array>
+				<string>Apple URL pasteboard type</string>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>com.operasoftware.Opera</string>
+			<key>name</key>
+			<string>Open with Opera</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Eric Doughty-Papassideris</string>
+		<key>categories</key>
+		<array>
+			<string>Applications</string>
+		</array>
+		<key>description</key>
+		<string>Plugin for connecting Quicksilver and &lt;a href="http://opera.com"&gt;Opera&lt;/a&gt;.&lt;br&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Adds a catalog with the bookmarks and searches of Opera&lt;/li&gt;
+				&lt;li&gt;Adds a "Operas current web page" proxy object&lt;/li&gt;
+				&lt;li&gt;Adds an "Open with Opera" action&lt;/li&gt;
+				&lt;li&gt;Adds a couple of scripts for switching between Opera and Safari&lt;/li&gt;
+				&lt;li&gt;Browse into Opera to get current open tabs&lt;/li&gt;
+			&lt;/ul&gt;
+		</string>
+		<key>icon</key>
+		<string>com.operasoftware.Opera</string>
+		<key>qsversion</key>
+		<string>29CC</string>
+		<key>relatedBundles </key>
+		<array>
+			<string>com.operasoftware.Opera</string>
+		</array>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetOperaGroup</string>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>ID</key>
+					<string>QSPresetQSOperaSource</string>
+					<key>icon</key>
+					<string>com.operasoftware.Opera</string>
+					<key>name</key>
+					<string>Opera bookmarks and searches</string>
+					<key>source</key>
+					<string>QSOperaSource</string>
+				</dict>
+				<dict>
+					<key>ID</key>
+					<string>QSPresetOperaBrowserControlScripts</string>
+					<key>icon</key>
+					<string>ScriptIcon</string>
+					<key>name</key>
+					<string>Control Scripts</string>
+					<key>settings</key>
+					<dict>
+						<key>baseBundle</key>
+						<string>com.blacktree.Quicksilver.QSOpera</string>
+						<key>folderDepth</key>
+						<integer>1</integer>
+						<key>icon</key>
+						<string>ScriptIcon</string>
+						<key>parser</key>
+						<string>QSDirectoryParser</string>
+						<key>path</key>
+						<string>Contents/Resources/</string>
+						<key>scanContents</key>
+						<integer>1</integer>
+						<key>skipItem</key>
+						<integer>1</integer>
+					</dict>
+					<key>source</key>
+					<string>QSFileSystemObjectSource</string>
+				</dict>
+			</array>
+			<key>icon</key>
+			<string>com.operasoftware.Opera</string>
+			<key>name</key>
+			<string>Opera</string>
+			<key>source</key>
+			<string>QSGroupObjectSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSOperaAction</key>
+			<string>QSOperaAction</string>
+		</dict>
+		<key>QSBundleChildHandlers</key>
+		<dict>
+			<key>com.operasoftware.Opera</key>
+			<string>QSOperaBundleSource</string>
+		</dict>
+		<key>QSBundleChildPresets</key>
+		<dict>
+			<key>com.operasoftware.Opera</key>
+			<string>QSOperaBundleSource</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>QSOperaBundleSource</key>
+			<string>QSOperaBundleSource</string>
+			<key>QSOperaSource</key>
+			<string>QSOperaSource</string>
+		</dict>
+		<key>QSProxies</key>
+		<dict>
+			<key>QSOperaCurrentWebPageProxy</key>
+			<dict>
+				<key>icon</key>
+				<string>com.operasoftware.Opera</string>
+				<key>name</key>
+				<string>Operas current web page</string>
+				<key>providerClass</key>
+				<string>QSOperaSource</string>
+				<key>types</key>
+				<array>
+					<string>Apple URL pasteboard type</string>
+					<string>NSStringPboardType</string>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict/>
+</dict>
+</plist>
