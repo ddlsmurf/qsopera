@@ -200,7 +200,7 @@ OperaBookmark *parseSearch(NSArray *lines) {
 		else if ([sLine hasPrefix:@"URL="])
 		{
 			bHasURL = YES;
-			[oItem setURL:[@"qs-" stringByAppendingString:[[sLine substringFromIndex:4] stringByReplacing:@"%s" with:@"***"]]];
+			[oItem setURL:[[sLine substringFromIndex:4] stringByReplacingOccurrencesOfString:@"%s" withString:@"***"]];
 		}
 		else if ([sLine hasPrefix:@"Key="])
 			[oItem setKeywords:[sLine substringFromIndex:4]];
