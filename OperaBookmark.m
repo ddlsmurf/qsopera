@@ -216,21 +216,24 @@ OperaBookmark *parseSearch(NSArray *lines) {
 
 +(NSArray*)loadBookmarks {
 	NSError *err = nil;
-	NSString *sBookmarks = [NSString stringWithContentsOfFile:getOperaBookmarksPath() encoding:NSUTF8StringEncoding error:&err];
-	if (sBookmarks == nil || err != nil)
+  NSString *sFilename = getOperaBookmarksPath();
+	NSString *sBookmarks = [NSString stringWithContentsOfFile:sFilename encoding:NSUTF8StringEncoding error:&err];
+	if (sBookmarks == nil || err != nil) {
+    NSLog(@"[QSOpera] Error reading bookmarks from '%@': %@", sFilename, err ?: @"<no NSError>");
 		return nil;
+  }
 	NSArray *sLines = [sBookmarks componentsSeparatedByString:@"\n"];
 	int iCount = sLines.count;
 	
 	if (iCount < 3) return nil;
 	if (![(NSString *)[sLines objectAtIndex:0] isEqualToString:@"Opera Hotlist version 2.0"])
 	{
-		NSLog(@"Opera file format unexpected.");
+    NSLog(@"[QSOpera] Error reading bookmarks from '%@': %@", sFilename, @"Format unexpected (1).");
 		return nil;
 	}
 	if (![(NSString *)[sLines objectAtIndex:1] isEqualToString:@"Options: encoding = utf8, version=3"])
 	{
-		NSLog(@"Opera file format unexpected.");
+    NSLog(@"[QSOpera] Error reading bookmarks from '%@': %@", sFilename, @"Format unexpected (2).");
 		return nil;
 	}
 	
@@ -272,16 +275,22 @@ OperaBookmark *parseSearch(NSArray *lines) {
 
 +(NSArray*)loadSearches {
 	NSError *err = nil;
-	NSString *sBookmarks = [NSString stringWithContentsOfFile:getOperaSearchesPath() encoding:NSUTF8StringEncoding error:&err];
-	if (sBookmarks == nil || err != nil)
+  NSString *sFilename = getOperaSearchesPath();
+	NSString *sBookmarks = [NSString stringWithContentsOfFile:sFilename encoding:NSUTF8StringEncoding error:&err];
+	if (sBookmarks == nil || err != nil) {
+    NSLog(@"[QSOpera] Error reading searches from '%@': %@", sFilename, err ?: @"<no NSError>");
 		return nil;
+  }
 	NSArray *sLines = [sBookmarks componentsSeparatedByString:@"\n"];
 	int iCount = sLines.count;
 	
-	if (iCount < 1) return nil;
+	if (iCount < 1) {
+    NSLog(@"[QSOpera] Error reading searches from '%@': %@", sFilename, @"Format unexpected (3).");
+    return nil;
+  }
 	if (![(NSString *)[sLines objectAtIndex:0] isEqualToString:@"Opera Preferences version 2.1"])
 	{
-		NSLog(@"Opera file format unexpected.");
+    NSLog(@"[QSOpera] Error reading searches from '%@': %@", sFilename, @"Format unexpected (4).");
 		return nil;
 	}
 	int i = 1;
