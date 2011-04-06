@@ -37,24 +37,20 @@ NSString *getOperaBookmarksPath() {
 NSString *getOperaSearchesPath() {
 	return [@"~/Library/Preferences/Opera Preferences/search.ini" stringByExpandingTildeInPath];
 }
+NSDate *qsopera_getDateOfFileLastChange(NSString *path) {
+  NSError *error = nil;
+  NSDictionary *result = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:&error];
+	if (result)
+		return (NSDate *)[result objectForKey:NSFileModificationDate];
+  return nil;
+}
 
-+(NSDate *)getLastChangeDate { 
-	NSDictionary *oResult = nil;
-	oResult = [[NSFileManager defaultManager] attributesOfItemAtPath:getOperaBookmarksPath() error:NULL];
-	NSDate *dLastDate = [NSDate distantFuture];
-	if (oResult != nil)
-		dLastDate = (NSDate *)[oResult objectForKey:NSFileModificationDate];
-	NSDictionary *oResult2 = nil;
-	oResult2 = [[NSFileManager defaultManager] attributesOfItemAtPath:getOperaSearchesPath() error:NULL];
-	if (oResult2 != nil)
-		if (oResult == nil)
-			dLastDate = (NSDate *)[oResult2 objectForKey:NSFileModificationDate];
-		else
-		{
-			NSDate *dNewDate = (NSDate *)[oResult2 objectForKey:NSFileModificationDate];
-			dLastDate = ([dLastDate compare:dNewDate] == NSOrderedAscending) ? dNewDate : dLastDate;
-		}
-	return dLastDate;
++(NSDate *)getLastChangeDate {
+  NSDate *dBookmarks = qsopera_getDateOfFileLastChange(getOperaBookmarksPath());
+  NSDate *dSearches = qsopera_getDateOfFileLastChange(getOperaSearchesPath());
+  if (!dBookmarks) return dSearches ?: [NSDate date];
+  if (!dSearches) return dBookmarks;
+  return [dBookmarks laterDate:dSearches];
 }
 
 NSString *getOperaBookmarkIconPath(NSString *iconFile) {
