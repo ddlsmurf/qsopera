@@ -288,7 +288,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		7F6B3EEC085CE8DF000735A8 /* Development */ = {
+		7F6B3EEC085CE8DF000735A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -305,7 +305,7 @@
 				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
 		7F6B3EED085CE8DF000735A8 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -324,14 +324,14 @@
 			};
 			name = Release;
 		};
-		7F6B3EF0085CE8DF000735A8 /* Development */ = {
+		7F6B3EF0085CE8DF000735A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 070990E7134C020C009A0331 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 			};
-			name = Development;
+			name = Debug;
 		};
 		7F6B3EF1085CE8DF000735A8 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -349,7 +349,7 @@
 		7F6B3EEB085CE8DF000735A8 /* Build configuration list for PBXNativeTarget "QSOpera" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F6B3EEC085CE8DF000735A8 /* Development */,
+				7F6B3EEC085CE8DF000735A8 /* Debug */,
 				7F6B3EED085CE8DF000735A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -358,7 +358,7 @@
 		7F6B3EEF085CE8DF000735A8 /* Build configuration list for PBXProject "QSOpera" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F6B3EF0085CE8DF000735A8 /* Development */,
+				7F6B3EF0085CE8DF000735A8 /* Debug */,
 				7F6B3EF1085CE8DF000735A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
