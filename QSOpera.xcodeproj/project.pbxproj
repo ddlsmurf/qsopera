@@ -290,6 +290,7 @@
 /* Begin XCBuildConfiguration section */
 		7F6B3EEC085CE8DF000735A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 070990E7134C020C009A0331 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(QSFrameworks)";
@@ -309,6 +310,7 @@
 		};
 		7F6B3EED085CE8DF000735A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 070990E8134C020C009A0331 /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(QSFrameworks)";
@@ -329,7 +331,6 @@
 			baseConfigurationReference = 070990E7134C020C009A0331 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 			};
 			name = Debug;
 		};
@@ -339,7 +340,6 @@
 			buildSettings = {
 				GCC_MODEL_TUNING = G5;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 			};
 			name = Release;
 		};
