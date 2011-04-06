@@ -185,7 +185,8 @@ OperaBookmark *parseBookmark(NSArray *lines) {
 OperaBookmark *parseSearch(NSArray *lines) {
 	OperaBookmark *oItem = [[[OperaBookmark alloc] init] autorelease];
 	BOOL bHasName = NO;
-	BOOL bHasURL = NO;
+    BOOL bUsePost = NO;
+    NSString *sURL = nil;
 	int iCount = [lines count];
 	int i;
 	for (i = 0; i < iCount; i++)
@@ -198,19 +199,23 @@ OperaBookmark *parseSearch(NSArray *lines) {
 			[oItem setTitle:[sLine substringFromIndex:5]];
 		}
 		else if ([sLine hasPrefix:@"URL="])
-		{
-			bHasURL = YES;
-			[oItem setURL:[[sLine substringFromIndex:4] stringByReplacingOccurrencesOfString:@"%s" withString:@"***"]];
-		}
+            sURL = [[sLine substringFromIndex:4] stringByReplacingOccurrencesOfString:@"%s" withString:@"***"];
 		else if ([sLine hasPrefix:@"Key="])
 			[oItem setKeywords:[sLine substringFromIndex:4]];
-		else if ([sLine hasPrefix:@"Deleted="] || [sLine hasPrefix:@"Is post="])
+        else if ([sLine hasPrefix:@"Is post="]) {
+            bUsePost = [[sLine substringFromIndex:8] isEqualToString:@"1"];
+        }
+		else if ([sLine hasPrefix:@"Deleted="])
 		{
 			if ([[sLine substringFromIndex:8] isEqualToString:@"1"])
 				return nil;
 		}
 	}
-	return (bHasName && bHasURL) ? oItem : nil;
+    if (bHasName && sURL) {
+        [oItem setURL:[(bUsePost ? @"qssp-" : @"qss-") stringByAppendingString:sURL]];
+        return oItem;
+    }
+	return nil;
 }
 
 +(NSArray*)loadBookmarks {
