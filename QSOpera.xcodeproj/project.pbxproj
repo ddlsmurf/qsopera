@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070990EB134C020C009A0331 /* Common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 070990E3134C020C009A0331 /* Common.xcconfig */; };
+		070990EC134C020C009A0331 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 070990E4134C020C009A0331 /* Debug.xcconfig */; };
+		070990ED134C020C009A0331 /* Developer.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 070990E5134C020C009A0331 /* Developer.xcconfig */; };
+		070990EE134C020C009A0331 /* QSPlugIn.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 070990E6134C020C009A0331 /* QSPlugIn.xcconfig */; };
+		070990EF134C020C009A0331 /* QSPlugIn_Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 070990E7134C020C009A0331 /* QSPlugIn_Debug.xcconfig */; };
+		070990F0134C020C009A0331 /* QSPlugIn_Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 070990E8134C020C009A0331 /* QSPlugIn_Release.xcconfig */; };
+		070990F1134C020C009A0331 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 070990EA134C020C009A0331 /* Release.xcconfig */; };
 		073128C20DFB8E16006189C5 /* URL - Copy from Firefox to Opera.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 073128B70DFB8E11006189C5 /* URL - Copy from Firefox to Opera.scpt */; };
 		073128C30DFB8E16006189C5 /* URL - Copy from Firefox to Safari.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 073128B80DFB8E11006189C5 /* URL - Copy from Firefox to Safari.scpt */; };
 		073128C40DFB8E16006189C5 /* URL - Copy from Opera to Firefox.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 073128B90DFB8E11006189C5 /* URL - Copy from Opera to Firefox.scpt */; };
@@ -28,6 +35,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		070990E3134C020C009A0331 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Common.xcconfig; path = Configuration/Common.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		070990E4134C020C009A0331 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configuration/Debug.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		070990E5134C020C009A0331 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = Configuration/Developer.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		070990E6134C020C009A0331 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSPlugIn.xcconfig; path = Configuration/QSPlugIn.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		070990E7134C020C009A0331 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSPlugIn_Debug.xcconfig; path = Configuration/QSPlugIn_Debug.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		070990E8134C020C009A0331 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSPlugIn_Release.xcconfig; path = Configuration/QSPlugIn_Release.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		070990E9134C020C009A0331 /* Quicksilver.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Quicksilver.pch; path = Configuration/Quicksilver.pch; sourceTree = QS_SOURCE_ROOT; };
+		070990EA134C020C009A0331 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configuration/Release.xcconfig; sourceTree = QS_SOURCE_ROOT; };
 		073128B70DFB8E11006189C5 /* URL - Copy from Firefox to Opera.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; name = "URL - Copy from Firefox to Opera.scpt"; path = "Resources/Scripts/URL - Copy from Firefox to Opera.scpt"; sourceTree = "<group>"; };
 		073128B80DFB8E11006189C5 /* URL - Copy from Firefox to Safari.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; name = "URL - Copy from Firefox to Safari.scpt"; path = "Resources/Scripts/URL - Copy from Firefox to Safari.scpt"; sourceTree = "<group>"; };
 		073128B90DFB8E11006189C5 /* URL - Copy from Opera to Firefox.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; name = "URL - Copy from Opera to Firefox.scpt"; path = "Resources/Scripts/URL - Copy from Opera to Firefox.scpt"; sourceTree = "<group>"; };
@@ -77,6 +92,7 @@
 		0259C574FE90428111CA0C5A /* QSOpera */ = {
 			isa = PBXGroup;
 			children = (
+				070990E2134C020C009A0331 /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				0259C582FE90428111CA0C5A /* Resources */,
@@ -103,6 +119,21 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
+		};
+		070990E2134C020C009A0331 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				070990E3134C020C009A0331 /* Common.xcconfig */,
+				070990E4134C020C009A0331 /* Debug.xcconfig */,
+				070990E5134C020C009A0331 /* Developer.xcconfig */,
+				070990E6134C020C009A0331 /* QSPlugIn.xcconfig */,
+				070990E7134C020C009A0331 /* QSPlugIn_Debug.xcconfig */,
+				070990E8134C020C009A0331 /* QSPlugIn_Release.xcconfig */,
+				070990E9134C020C009A0331 /* Quicksilver.pch */,
+				070990EA134C020C009A0331 /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
@@ -213,6 +244,13 @@
 				073128C70DFB8E16006189C5 /* URL - Copy from Safari to Opera.scpt in Resources */,
 				073128C80DFB8E16006189C5 /* URL - Move from Opera to Safari.scpt in Resources */,
 				073128C90DFB8E16006189C5 /* URL - Move from Safari to Opera.scpt in Resources */,
+				070990EB134C020C009A0331 /* Common.xcconfig in Resources */,
+				070990EC134C020C009A0331 /* Debug.xcconfig in Resources */,
+				070990ED134C020C009A0331 /* Developer.xcconfig in Resources */,
+				070990EE134C020C009A0331 /* QSPlugIn.xcconfig in Resources */,
+				070990EF134C020C009A0331 /* QSPlugIn_Debug.xcconfig in Resources */,
+				070990F0134C020C009A0331 /* QSPlugIn_Release.xcconfig in Resources */,
+				070990F1134C020C009A0331 /* Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +326,7 @@
 		};
 		7F6B3EF0085CE8DF000735A8 /* Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 070990E7134C020C009A0331 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
@@ -296,11 +335,8 @@
 		};
 		7F6B3EF1085CE8DF000735A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 070990E8134C020C009A0331 /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
 				GCC_MODEL_TUNING = G5;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
