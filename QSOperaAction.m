@@ -21,11 +21,16 @@
 */
 
 #import "QSOperaAction.h"
+#import <QSCore/QSObject_StringHandling.h>
 
 @implementation QSOperaAction
 
 - (QSObject *)performActionOnObject:(QSObject *)dObject{
-	[[NSWorkspace sharedWorkspace] openURLs:[NSArray arrayWithObject:[NSURL URLWithString:[dObject stringValue]]] withAppBundleIdentifier:@"com.operasoftware.Opera" options:0 additionalEventParamDescriptor:nil launchIdentifiers:nil];
+	[[NSWorkspace sharedWorkspace] openURLs:[NSArray arrayWithObject:[NSURL URLWithString:[dObject stringValue]]]
+                  withAppBundleIdentifier:@"com.operasoftware.Opera"
+                                  options:0
+           additionalEventParamDescriptor:nil
+                        launchIdentifiers:nil];
 	
 	return nil;
 }

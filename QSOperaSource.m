@@ -24,6 +24,7 @@
 #import "OperaBookmark.h"
 #import "QSOpera.h"
 #import <QSCore/QSObject.h>
+#import <QSCore/QSObject_URLHandling.h>
 
 
 @implementation QSOperaSource
