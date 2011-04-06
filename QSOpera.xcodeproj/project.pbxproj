@@ -7,13 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		070990EB134C020C009A0331 /* Common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 070990E3134C020C009A0331 /* Common.xcconfig */; };
-		070990EC134C020C009A0331 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 070990E4134C020C009A0331 /* Debug.xcconfig */; };
-		070990ED134C020C009A0331 /* Developer.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 070990E5134C020C009A0331 /* Developer.xcconfig */; };
-		070990EE134C020C009A0331 /* QSPlugIn.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 070990E6134C020C009A0331 /* QSPlugIn.xcconfig */; };
-		070990EF134C020C009A0331 /* QSPlugIn_Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 070990E7134C020C009A0331 /* QSPlugIn_Debug.xcconfig */; };
-		070990F0134C020C009A0331 /* QSPlugIn_Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 070990E8134C020C009A0331 /* QSPlugIn_Release.xcconfig */; };
-		070990F1134C020C009A0331 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 070990EA134C020C009A0331 /* Release.xcconfig */; };
 		073128C20DFB8E16006189C5 /* URL - Copy from Firefox to Opera.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 073128B70DFB8E11006189C5 /* URL - Copy from Firefox to Opera.scpt */; };
 		073128C30DFB8E16006189C5 /* URL - Copy from Firefox to Safari.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 073128B80DFB8E11006189C5 /* URL - Copy from Firefox to Safari.scpt */; };
 		073128C40DFB8E16006189C5 /* URL - Copy from Opera to Firefox.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 073128B90DFB8E11006189C5 /* URL - Copy from Opera to Firefox.scpt */; };
@@ -245,13 +238,6 @@
 				073128C70DFB8E16006189C5 /* URL - Copy from Safari to Opera.scpt in Resources */,
 				073128C80DFB8E16006189C5 /* URL - Move from Opera to Safari.scpt in Resources */,
 				073128C90DFB8E16006189C5 /* URL - Move from Safari to Opera.scpt in Resources */,
-				070990EB134C020C009A0331 /* Common.xcconfig in Resources */,
-				070990EC134C020C009A0331 /* Debug.xcconfig in Resources */,
-				070990ED134C020C009A0331 /* Developer.xcconfig in Resources */,
-				070990EE134C020C009A0331 /* QSPlugIn.xcconfig in Resources */,
-				070990EF134C020C009A0331 /* QSPlugIn_Debug.xcconfig in Resources */,
-				070990F0134C020C009A0331 /* QSPlugIn_Release.xcconfig in Resources */,
-				070990F1134C020C009A0331 /* Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
