@@ -22,7 +22,6 @@
 
 #import "OperaBookmark.h"
 
-
 @implementation OperaBookmark
 
 @synthesize title=_sTitle, icon=_sIcon, URL=_sURL, description=_sDescription, keywords=_sKeywords;
@@ -219,7 +218,7 @@ OperaBookmark *parseSearch(NSArray *lines) {
   NSString *sFilename = getOperaBookmarksPath();
 	NSString *sBookmarks = [NSString stringWithContentsOfFile:sFilename encoding:NSUTF8StringEncoding error:&err];
 	if (sBookmarks == nil || err != nil) {
-    NSLog(@"[QSOpera] Error reading bookmarks from '%@': %@", sFilename, err ?: @"<no NSError>");
+    NSLog(@"[QSOpera] Error reading bookmarks from '%@': %@", sFilename, [err description] ?: @"<no NSError>");
 		return nil;
   }
 	NSArray *sLines = [sBookmarks componentsSeparatedByString:@"\n"];
@@ -278,7 +277,7 @@ OperaBookmark *parseSearch(NSArray *lines) {
   NSString *sFilename = getOperaSearchesPath();
 	NSString *sBookmarks = [NSString stringWithContentsOfFile:sFilename encoding:NSUTF8StringEncoding error:&err];
 	if (sBookmarks == nil || err != nil) {
-    NSLog(@"[QSOpera] Error reading searches from '%@': %@", sFilename, err ?: @"<no NSError>");
+    NSLog(@"[QSOpera] Error reading searches from '%@': %@", sFilename, [err description] ?: @"<no NSError>");
 		return nil;
   }
 	NSArray *sLines = [sBookmarks componentsSeparatedByString:@"\n"];
