@@ -46,6 +46,8 @@
 			<string>Applications</string>
 		</array>
 		<key>description</key>
+		<string>Plugin for connecting Quicksilver and the Opera browser</string>
+		<key>extendedDescription</key>
 		<string>Plugin for connecting Quicksilver and &lt;a href="http://opera.com"&gt;Opera&lt;/a&gt;.&lt;br&gt;
 			&lt;ul&gt;
 				&lt;li&gt;Adds a catalog with the bookmarks and searches of Opera&lt;/li&gt;
